@@ -1,5 +1,5 @@
 import { CurrencyPipe, SlicePipe } from '@angular/common';
-import { Component, EventEmitter, Output, input, output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ProductDto } from '../../../infraestructure/dtos/product.dto';
 
@@ -12,7 +12,6 @@ import { ProductDto } from '../../../infraestructure/dtos/product.dto';
 })
 export class CardComponent {
   product = input.required<ProductDto>();
-  //@Output() addToCartEvent = new EventEmitter<ProductDto>();
   addToCartEvent = output<ProductDto>();
   onAddToCart(): void {
     this.addToCartEvent.emit(this.product());

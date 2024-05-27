@@ -42,16 +42,17 @@ export const CartStore = signalStore(
       } else {
         patchState(store, { products: [...products(), product] });
       }
+      console.log('Product added', 'DOMINI STORE');
       toastSvc.success('Product added', 'DOMINI STORE');
     },
     removeFromCart(id: number) {
       const updatedProducts = products().filter((product) => product.id !== id);
       patchState(store, { products: updatedProducts });
-      toastSvc.info('Product removed', 'DOMINI STORE');
+      toastSvc.success('Product removed', 'DOMINI STORE');
     },
     clearCart() {
       patchState(store, initialState);
-      toastSvc.info('Cart cleared', 'DOMINI STORE');
+      toastSvc.success('Cart cleared', 'DOMINI STORE');
     },
   }))
 );

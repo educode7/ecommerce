@@ -61,3 +61,4 @@ export default class DetailsComponent {
     }
     return this._sanitizer.bypassSecurityTrustHtml(svgContent);
   }
+}
