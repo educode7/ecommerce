@@ -4,7 +4,7 @@ export interface ProductDto {
   id: number;
   image: string;
   price: number;
-  rating?: RatingDto;
+  rating: RatingDto;
   title: string;
   qty: number;
   subTotal: number;
